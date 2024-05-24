@@ -240,7 +240,7 @@ accept = 445
 connect = 127.0.0.1:109
 
 [dropbear]
-accept = 777
+accept = 443
 connect = 127.0.0.1:443
 
 [ws-stunnel]
