@@ -228,7 +228,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 cd
 # install stunnel 5
 cd /root/
-wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://github.com/User058/ssh/raw/main/stunnel5/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -287,7 +287,7 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/User058/ssh/main/stunnel5/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
