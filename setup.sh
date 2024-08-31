@@ -81,7 +81,7 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${BBlue}NOTES${NC} ] enter now"
   read
 else
-  echo -e "[ ${BGreen}INFO${NC} ] Oke installed"
+  echo -e "[ ${BGreen}INFO${NC} ] Okay installed"
 fi
 
 ttet=`uname -r`
@@ -119,14 +119,14 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
-echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
+echo -e "$BGreen 1. Use Domain Random $NC"
+echo -e "$BGreen 2. Choose Your Own Domain $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
+read -rp " input 1 or 2 : " dns
 if test $dns -eq 1; then
 wget https://raw.githubusercontent.com/User058/ssh/main/ssh/cf && chmod +x cf && ./cf
 elif test $dns -eq 2; then
-read -rp "Enter Your Domain / masukan domain : " dom
+read -rp "Enter Your Domain : " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
 echo "$dom" > /root/scdomain
 echo "$dom" > /etc/xray/scdomain
